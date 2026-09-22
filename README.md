@@ -8,7 +8,7 @@ UVA, Fall 2026. Assignments and group work, newest first.
 
 Aidan Szilagyi, Falong Fan
 
-Slides: REPLACE_WITH_GOOGLE_SLIDES_LINK
+Slides: [Google Slides](https://docs.google.com/presentation/d/1t0fTrW72CZWCmwQ258R-q0OTB22aMlcz8T8VzB0y3R8/edit?usp=sharing)
 
 Files: [`arm-cortex-m7/`](arm-cortex-m7/)
 
