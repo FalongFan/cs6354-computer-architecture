@@ -31,13 +31,3 @@ Background:
 - [ARM white paper on the DSP capabilities of Cortex-M4 and Cortex-M7](https://community.arm.com/cfs-file/__key/communityserver-discussions-components-files/471/7607.ARM-white-paper-_2D00_-DSP-capabilities-of-Cortex_2D00_M4-and-Cortex_2D00_M7.pdf) — saturating arithmetic, SIMD, MAC
 
 ### Discussion Questions
-
-1. The M7 gives you both TCM and cache sitting next to the core. When is it actually
-   worth putting code or data in TCM instead of letting the cache handle it?
-2. The M7 issues two instructions per cycle but stays strictly in order. What would
-   out-of-order execution buy on a part like this, and what would it cost?
-3. There is no hardware coherency between the D-cache and DMA, so software has to
-   clean and invalidate by hand. Is pushing that onto the programmer a reasonable
-   tradeoff for an MCU?
-4. Interrupt entry is around 12 cycles, about what the much simpler M3 manages. How
-   does the M7 keep it that low with a deeper pipeline and caches in the path?
