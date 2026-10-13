@@ -4,6 +4,27 @@ UVA, Fall 2026. Assignments and group work, newest first.
 
 ---
 
+## Pentium 4 Prescott Briefing: NetBurst and the Deep Pipeline
+
+Jianyu Luo, Mingjia Shi, Falong Fan
+
+Slides: [Google Slides](https://docs.google.com/presentation/d/15ByblqhzJ6zZq3j3ovOHuhkdVZNbeNHIgZPeIbUudHE/edit?usp=sharing)
+
+Prescott is the third Pentium 4, built on a 90nm process. Our briefing covers why
+Intel designed the NetBurst microarchitecture around a deep pipeline and a high
+clock, how Prescott stretched that pipeline from 20 to 31 stages and what it cost
+in branch mispredictions, and the other changes Prescott brought: SSE3, a larger
+cache hierarchy, and an improved Hyper-Threading.
+
+### Sources
+
+- G. Hinton et al., "The Microarchitecture of the Pentium 4 Processor", *Intel Technology Journal*, Q1 2001 — [PDF](https://www.intel.com/content/dam/www/public/us/en/documents/research/2001-vol05-iss-1-intel-technology-journal.pdf) — NetBurst design goals, trace cache, misprediction pipeline
+- D. Boggs et al., "The Microarchitecture of the Intel Pentium 4 Processor on 90nm Technology", *Intel Technology Journal*, Vol. 8, Issue 1, February 2004 — [PDF](https://www.intel.com/content/dam/www/public/us/en/documents/research/2004-vol08-iss-1-intel-technology-journal.pdf) — Prescott pipeline, branch prediction, SSE3, caches, Hyper-Threading
+- R. Singhal, "Intel Pentium 4 Processor on 90nm Technology", Hot Chips 16, August 2004 — [slides](https://old.hotchips.org/wp-content/uploads/hc_archives/hc16/3_Tue/15_HC16_Sess10_Pres3_bw.pdf) — Prescott overview and cache comparison with Northwood
+- P. N. Glaskowsky, "Prescott Pushes Pipelining Limits", *Microprocessor Report*, February 2, 2004 — [PDF](http://www.cs.virginia.edu/~mc2zk/cs451/180501.pdf) — Prescott vs. Northwood performance, power, and die size
+
+---
+
 ## In-order Superscalar Processor Briefing: ARM Cortex-M7
 
 Aidan Szilagyi, Falong Fan
@@ -29,5 +50,3 @@ Primary:
 Background:
 
 - [ARM white paper on the DSP capabilities of Cortex-M4 and Cortex-M7](https://community.arm.com/cfs-file/__key/communityserver-discussions-components-files/471/7607.ARM-white-paper-_2D00_-DSP-capabilities-of-Cortex_2D00_M4-and-Cortex_2D00_M7.pdf) — saturating arithmetic, SIMD, MAC
-
-### Discussion Questions
