@@ -4,6 +4,41 @@ UVA, Fall 2026. Assignments and group work, newest first.
 
 ---
 
+## GPU Briefing: The Apple M5 GPU
+
+Jianyu Luo, Mingjia Shi, Falong Fan
+
+Slides: [Google Slides](https://docs.google.com/presentation/d/16gPYIggvZbBOskalvH0OQkr-v4d008G5IYwSAUDv8-A/edit?usp=sharing)
+
+The M5 is Apple's GPU family 10. Apple uses one GPU core design from the iPhone to
+the Mac and scales it by adding cores, from 10 in the M5 to 80 in the M5 Ultra.
+Apple does not publish a microarchitecture paper, so we combine Apple's developer
+documentation with independent measurements. Our briefing covers how one shader
+core runs 32-thread SIMD-groups and hides memory latency by switching between them,
+how Dynamic Caching lets more SIMD-groups fit by allocating registers at run time,
+the Neural Accelerator that M5 adds to every GPU core, and the memory system the
+GPU shares with the CPU.
+
+### Sources
+
+Primary:
+
+- Apple Newsroom, "Apple debuts M5 Pro and M5 Max", March 2026 — [link](https://www.apple.com/newsroom/2026/03/apple-debuts-m5-pro-and-m5-max-to-supercharge-the-most-demanding-pro-workflows/) — M5 family core counts, Neural Accelerators, memory bandwidth
+- Apple Tech Talk, "Explore GPU advancements in M3 and A17 Pro" — [video](https://developer.apple.com/videos/play/tech-talks/111375/) — shader core structure, Dynamic Caching, SIMD-group scheduling
+- Apple, *Metal Shading Language Specification* 4.1 — [PDF](https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf) — SIMD-groups, threadgroup memory, tensor operations
+- P. Turner, metal-benchmarks — [GitHub](https://github.com/philipturner/metal-benchmarks) — measured M1/M2 core layout, register file size, ALU throughput
+- T. Zakharko, "Apple Neural Accelerators benchmark" — [link](https://tzakharko.github.io/apple-neural-accelerators-benchmark/) — measured Neural Accelerator throughput on M5
+- P. Hübner et al., "Apple vs. Oranges: Evaluating the Apple Silicon M-Series SoCs for HPC Performance and Efficiency", arXiv 2025 — [arXiv](https://arxiv.org/abs/2502.05317) — M1 to M4 comparison, memory bandwidth, GPU performance and power
+
+Background:
+
+- D. Johnson, Apple G13 GPU architecture reference — [link](https://dougallj.github.io/applegpu/docs.html) — instruction set, registers per thread
+- Chips and Cheese, "A Brief Look at Apple's M2 Pro iGPU" — [link](https://chipsandcheese.com/2023/10/31/a-brief-look-at-apples-m2-pro-igpu/) — cache and memory latency measurements
+- Apple, *Metal Performance Primitives Programming Guide* — [PDF](https://developer.apple.com/download/files/Metal-Performance-Primitives-Programming-Guide.pdf) — programming the Neural Accelerators
+- Apple, *Metal Feature Set Tables* — [PDF](https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf) — GPU families and per-family limits
+
+---
+
 ## Pentium 4 Prescott Briefing: NetBurst and the Deep Pipeline
 
 Jianyu Luo, Mingjia Shi, Falong Fan
